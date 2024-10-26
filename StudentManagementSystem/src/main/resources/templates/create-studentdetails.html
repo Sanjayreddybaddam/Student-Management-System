@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+	/>
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+
+		<!-- Brand -->
+
+		<a class="navbar-brand" href="#">Student Management System</a>
+
+		
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#collapsibleNavbar">
+
+			<span class="navbar-toggler-icon"></span>
+
+		</button>
+
+		<!-- Navbar links -->
+
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+			<ul class="navbar-nav">
+				
+                  
+				<li class="nav-item"><a class="nav-link" th:href="@{/studentdetails}">Student Details
+						</a></li>
+
+			</ul>
+
+
+		</div>
+	</nav>
+
+
+	<div class="container">
+
+
+
+		<div class="row">
+
+			<div
+				class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+
+				<div class="text-center" style="font-size: 30px;">Create Student Details </div>
+
+
+				<div class="card-body"></div>
+
+				<form th:action="@{/studentdetails}" th:object="${studentdetail}" method="post">
+
+					<div class="form-group">
+
+						<label>Student Name</label> <input type="text"
+							name="studentname" class=" form-control"
+							placeholder="Enter StudentName" required/>
+
+
+					</div>
+
+					<div class="form-group">
+
+						<label>Student Email</label> <input type="email"
+							name="studentemail" class=" form-control"
+							placeholder="Enter Student Email" required/>
+
+					</div>
+					
+					<div class="form-group">
+
+						<label>Course Name</label> <input type="text"
+							name="coursename" class=" form-control"
+							placeholder="Enter Couse Name" required/>
+
+					</div>
+					<div class="form-group">
+
+						<label>Course Credits</label> <input type="text"
+							name="coursecredits" class=" form-control"
+							placeholder="Enter Course Credits" required/>
+
+					</div>
+
+					<div class="box-footer">
+
+						<button type="submit" class="btn btn-primary">Submit</button>
+
+					</div>
+			</div>
+		</div>
+	</div>	
+	
+</body>
+</html>
